@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>XML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="func.js"></script>
+</head>
+
+<body onload="openXML()">
+    <div class="input_row">
+
+        <p>Факультет:&nbsp;</p>
+        <input type=text id="input_faculty" class="input_faculty" readonly>
+
+        <p>Курс:&nbsp;</p>
+        <input type=text id="input_course" class="input_course" readonly>
+
+        <p>Группа:&nbsp;</p>
+        <select id="input_group" class="input_group" onchange="changeFacAndCrs()">
+            <option value="">&nbsp;</option>
+        </select>
+
+        <p>ФИО:&nbsp;</p>
+        <select id="input_name" class="input_name" onchange="changeAll()">
+            <option value="">&nbsp;</option>
+        </select>
+
+    </div>
+    <p><span id="name"></span></p>
+    <table border=3 width=32% class="table">
+        <tr>
+            <td width=80%>Предмет</td>
+            <td width=7%>0</td>
+            <td width=7%>1</td>
+            <td width=7%>2</td>
+        </tr>
+        <tr>
+            <td width=80%>Метрология, Стандартизация и Сертификация</td>
+            <form>
+                <td><input name="radio_1" type=radio></td>
+                <td><input name="radio_1" type=radio></td>
+                <td><input name="radio_1" type=radio></td>
+            </form>
+        </tr>
+        <tr>
+            <td width=80%>Объектно Ориентированное Программирование</td>
+            <form>
+                <td><input name="radio_2" type=radio></td>
+                <td><input name="radio_2" type=radio></td>
+                <td><input name="radio_2" type=radio></td>
+            </form>
+        </tr>
+        <tr>
+            <td width=80%>Архитектура Вычислительных Систем</td>
+            <form>
+                <td><input name="radio_3" type=radio></td>
+                <td><input name="radio_3" type=radio></td>
+                <td><input name="radio_3" type=radio></td>
+            </form>
+        </tr>
+        <tr>
+            <td width=80%>Теория Массового Обслуживания</td>
+            <form>
+                <td><input name="radio_4" type=radio></td>
+                <td><input name="radio_4" type=radio></td>
+                <td><input name="radio_4" type=radio></td>
+            </form>
+        </tr>
+        <tr>
+            <td width=80%>Экономика</td>
+            <form>
+                <td><input name="radio_5" type=radio></td>
+                <td><input name="radio_5" type=radio></td>
+                <td><input name="radio_5" type=radio></td>
+            </form>
+        </tr>
+        <tr>
+            <td width=80%>Базы Данных</td>
+            <form>
+                <td><input name="radio_6" type=radio></td>
+                <td><input name="radio_6" type=radio></td>
+                <td><input name="radio_6" type=radio></td>
+            </form>
+        </tr>
+        <tr>
+            <td width=80%>Физическая Культура</td>
+            <form>
+                <td><input name="radio_7" type=radio></td>
+                <td><input name="radio_7" type=radio></td>
+                <td><input name="radio_7" type=radio></td>
+            </form>
+        </tr>
+    </table>
+    <p>Средний балл за контрольный срок составляет&nbsp;<span id="point"></span></p>
+    <div>
+        <input class="button" type=button value="Выполнить" onclick="countPoints()">
+        <input class="button" type=button value="Отменить" onclick="deletePoints()">
+    </div>
+    <div>
+        <span id="span1" class="menu_span1" style="display:none">
+            <a class=" menu_hidden_link">subMenu1</a>
+            <a class="menu_hidden_link">subMenu2</a>
+            <a class="menu_hidden_link">subMenu3</a>
+        </span>
+    </div>
+</body>
+
+</html>

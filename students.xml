@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<students>
+
+    <student>
+        <name>Шаньгин Евгений</name>
+        <faculty>ИВТ</faculty>
+        <course>3</course>
+        <group>П-42</group>
+        <item score="2">Metrology</item>
+        <item score="1">OOP</item>
+        <item score="2">CSA</item>
+        <item score="1">Queuing Theory</item>
+        <item score="1">Economy</item>
+        <item score="1">Data Bases</item>
+        <item score="2">Physical Education</item>
+    </student>
+
+</students>

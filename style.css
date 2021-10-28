@@ -1,0 +1,34 @@
+select, input[type=text][readonly] {
+    height: 18px;
+    margin-right: 10px;
+}
+
+table, td, th {
+	margin: 0 auto 20px 10px;
+}
+
+.input_row {
+    display:flex;
+    align-items: center;
+}
+
+.input_faculty {
+    width:60px;
+}
+
+.input_course {
+    width:35px;
+}
+
+.input_group {
+    width:80px;
+}
+
+.input_name {
+    width:220px;
+}
+
+.table {
+	text-align: center;
+	padding: 0;
+}

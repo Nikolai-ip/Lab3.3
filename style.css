@@ -1,8 +1,9 @@
 
 html {
     background: #1A0C4D;
-    color:white;
-    font-family:Caladea;
+    color: white;
+    font-family: Caladea;
+    text-shadow:1px 1px black;
 }
 select, input[type=text][readonly] {
     height: 18px;

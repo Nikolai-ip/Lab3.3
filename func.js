@@ -51,6 +51,7 @@ function changeFacAndCrs() {
         y[0].checked = false;
         y[1].checked = false;
         y[2].checked = false;
+        y[3].checked = false;
     }
 
     y = document.getElementById("input_name");
@@ -90,6 +91,7 @@ function changeAll() {
             y[0].checked = false;
             y[1].checked = false;
             y[2].checked = false;
+            y[3].checked = false;
         }
         return;
     }
@@ -115,6 +117,9 @@ function changeAll() {
             y[1].checked = true;
         if (students[studentNumber].children[i + 3].getAttribute("score") == "2")
             y[2].checked = true;
+            let thirdCol = document.getElementById ("thirdCol0");
+            if (students[studentNumber].children[i + 3].getAttribute("score") == "3" && thirdCol.style.display == "block")
+            y[3].checked = true;
     }
 }
 
@@ -126,6 +131,8 @@ function countPoints() {
         y = document.getElementsByName("radio_" + i.toString());
         if (y[1].checked == true) sum += 1;
         if (y[2].checked == true) sum += 2;
+        let thirdCol = document.getElementById ("thirdCol0");
+        if (y[3].checked == true && thirdCol.style.display == "block") sum += 3;
     }
     sum /= 7;
     y = document.getElementById("point");
@@ -134,4 +141,17 @@ function countPoints() {
 
 function deletePoints() {
     document.getElementById("point").innerHTML = "";
+}
+
+function add_delete_RowPoints() {
+    let thirdCol = [7];
+    for (let i = 0; i < 8; ++i) {
+        thirdCol[i] = document.getElementById ("thirdCol" + i);
+    }  
+    for (let i = 0; i < 8; ++i) {
+        if (thirdCol[i].style.display == "none")
+            thirdCol[i].style.display = "block";
+        else 
+            thirdCol[i].style.display = "none";
+    }
 }
